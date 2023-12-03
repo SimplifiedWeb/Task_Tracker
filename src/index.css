@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+
+html {
+    height: 100vh;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #253043, #0f172a);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.category-btns {
+    width: 50%;
+    transition: 0.3s ease-in;
+}
+
+.centering {
+    margin: 10px auto;
+    height: 96vh;
+}
+
+@keyframes bg-yellow-animation {
+    0% {
+        background-color: #f4dc8e;
+        /* Start color */
+    }
+
+    50% {
+        background-color: #ffed4a;
+        /* Middle color */
+    }
+
+    100% {
+        background-color: #a4810f;
+        /* End color */
+    }
+}
+
+@keyframes bg-green-animation {
+    0% {
+        background-color: #b7f9df;
+        /* Start color */
+    }
+
+    50% {
+        background-color: #64ffc6;
+        /* Middle color */
+    }
+
+    100% {
+        background-color: #0ba266;
+        /* End color */
+    }
+}
+
+.animate-bg-yellow {
+    animation: bg-yellow-animation 2s infinite;
+}
+
+.animate-bg-green {
+    animation: bg-green-animation 2s infinite;
+}
+
+
+/* Dustbin container styles */
+.main {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black, red);
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: 0.5s linear ease-in;
+    border: 3px dashed rgb(255, 236, 236);
+}
+
+.overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashbin-icon {
+
+    animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-5px, 5px);
+    }
+
+    50% {
+        transform: translate(5px, -5px);
+    }
+
+    75% {
+        transform: translate(-5px, 5px);
+    }
+}
+
+.loader {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+    0% {
+        box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+    }
+
+    25% {
+        box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px;
+    }
+
+    50% {
+        box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px;
+    }
+
+    75% {
+        box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+    }
+
+    100% {
+        box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
+    }
+}
+
+
+.drag-handle {
+    /* Adjust styles as needed */
+    cursor: grab;
+    height: 20px;
+    width: 100%;
+    background-color: #102211;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1c221c;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+
+}
+
+scrollbar {
+    -moz-appearance: none;
+}
+
+scrollbar-thumb {
+    background-color: #4caf50;
+}
+
+scrollbar-track {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .category-btns {
+        width: 100%;
+    }
+
+    .centering {
+        min-height: 70vh;
+        margin: 0px;
+    }
+
+    .content {
+        width: 100vw;
+        height: auto;
+        margin: 0px;
+    }
+
+}
+
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    /* margin-right: 15vh; */
+    margin-top: 5px;
+}
+
+
+
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+
+}
+
+.animation>div {
+    /* padding: 20px; */
+    height: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.animation div {
+    animation: text-animation 12s infinite;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.first div {
+    background-color: #20a7d8;
+}
+
+.second div {
+    background-color: #CD921E;
+}
+
+.third div {
+    background-color: #c10528;
+}
+
+@keyframes text-animation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+}
+
+.important-task {
+    animation: pulse 1.5s both;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
