@@ -28,9 +28,9 @@ To run this project locally, follow these steps:
    
 2. Intall Dependencies:
    
-  cd Task_Tracker
-  
-  npm install
+     cd Task_Tracker
+     
+     npm install
 
 4. Run the application:
    
