@@ -26,14 +26,17 @@ To run this project locally, follow these steps:
    ```bash
    git clone
    
-2. Intall Dependencies
+2. Intall Dependencies:
+   
   cd Task_Tracker
   npm install
 
-4. Run the application
+4. Run the application:
+   
    npm run dev or npm start
 
-Acknowledgments
+Acknowledgments:
+
 I would like to thank ChatGPT for its assistance during the development process, especially in learning Tailwind CSS.
 
 
